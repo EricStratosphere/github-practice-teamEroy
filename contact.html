@@ -5,86 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Me</title>
     <style>
-      /* Basic page layout */
       body {
         font-family: Arial, sans-serif;
         margin: 0;
-        background: #f5f5f5;
+        padding: 20px;
+        background-color: #f9f9f9;
       }
-      header,
-      footer {
+      header {
         background: #333;
         color: #fff;
+        padding: 1rem 1.25rem 1.5rem;
         text-align: center;
-        padding: 1rem;
       }
-      nav {
-        background: #222;
-        padding: 0.5rem 1rem;
+      .top-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.75rem;
+      }
+      .brand {
+        font-size: 1.5rem;
+        font-weight: 700;
       }
       nav a {
         color: #fff;
-        margin-right: 1rem;
         text-decoration: none;
+        margin-left: 1.5rem;
         font-weight: 500;
       }
+      nav a:first-child { margin-left: 0; }
       nav a:hover { text-decoration: underline; }
-      main {
-        max-width: 600px;
-        margin: 2rem auto;
-        background: #fff;
-        padding: 1.5rem 2rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-      }
       h1 { margin: 0; }
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
+      main { margin: 2rem 0; }
+      form { display: flex; flex-direction: column; gap: 1rem; }
       label { font-weight: bold; }
-      input[type="text"],
-      input[type="email"],
-      textarea {
+      input[type="text"], input[type="email"], textarea {
         width: 100%;
         padding: 0.75rem;
         border: 1px solid #ccc;
         border-radius: 4px;
         font-size: 1rem;
         font-family: inherit;
+        background: #fff;
       }
-      textarea {
-        resize: vertical;
-        min-height: 120px;
-      }
+      textarea { resize: vertical; min-height: 120px; }
       button {
         background: #0077cc;
         color: #fff;
         border: none;
         padding: 0.75rem 1rem;
-        font-size: 1rem;
+        font-size: 1.5rem;
         border-radius: 4px;
         cursor: pointer;
       }
       button:hover { background: #005fa3; }
-      .success {
-        margin-top: 0.5rem;
-        color: green;
-        font-weight: bold;
-        display: none;
+      .success { margin-top: 0.5rem; color: green; font-weight: bold; display: none; }
+      footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
       }
     </style>
   </head>
   <body>
     <header>
+      <div class="top-bar">
+        <div class="brand">MyWebsite</div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+      </div>
       <h1>Contact Me</h1>
     </header>
-
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#" aria-current="page">Contact</a>
-    </nav>
 
     <main>
       <h2>Send a Message</h2>
@@ -113,7 +109,6 @@
     </footer>
 
     <script>
-      // Show a success message and clear form (demo only)
       document.getElementById('contactForm').addEventListener('submit', function (e) {
         e.preventDefault();
         const success = document.getElementById('successMsg');
