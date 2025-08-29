@@ -1,0 +1,59 @@
+.teamContainer{
+    display:flex;
+    /* display : grid;
+    grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+     
+    grid-template-rows:repeat(auto-fill, minmax(200px, 1fr));
+     */
+    flex-wrap :wrap;
+    justify-content : center;
+    flex-shrink : 20px;
+    gap : 50px;
+    margin-left : auto;
+    margin-right:auto;
+    padding : 10px 10px;
+    height : auto;
+}
+
+.memberCard{
+    border : solid 2px;
+    border-radius : 20px;
+    height : auto;
+    width : 300px;
+    transition: transform 0.3s ease, box-shadow 0.2s ease;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    text-align : center;
+}
+
+.explanation{
+    font-size : 1.5rem; 
+    display : none;
+}
+
+.memberCard:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 4);
+}
+
+.memberCard:hover .explanation{
+    display : block;
+}
+
+.memberCard:hover .img-container{
+    display : block;
+}
+.img-container{
+    height : 150px;
+    background-color : none;
+    border-radius : 20px;
+    display : none;
+    padding : 20px;
+}
+
+.img-container img{
+    height : inherit;
+    border-radius : 100px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 2);
+    object-fit: cover;
+    left : 0;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="Contact.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">MyWebsite</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="AboutMe.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Contact Me</h1>
+  </header>
+
+  <main>
+    <h2>Send a Message</h2>
+    <p>Fill out the form below. (Demo only – no real send.)</p>
+    <form id="contactForm">
+      <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write something..." required></textarea>
+      </div>
+      <button type="submit">Send</button>
+      <div id="successMsg" class="success">Message sent! (Demo)</div>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Website</p>
+    <div class="social-links">
+      <h3>Follow us</h3>
+      <ul class="list-social-links">
+        <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+        <li><a href="https://x.com/" class="fa fa-twitter"></a></li>
+        <li><a href="https://www.linkedin.com/" class="fa fa-linkedin"></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const success = document.getElementById('successMsg');
+      success.style.display = 'block';
+      this.reset();
+      setTimeout(() => { success.style.display = 'none'; }, 3000);
+    });
+  </script>
+</body>
+</html>
