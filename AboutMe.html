@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>About The Team</title>
   <link rel="stylesheet" href="AboutMe.css">
   <style>
@@ -29,6 +30,14 @@
   </style>
 </head>
 <body>
+  <nav class="navbar">
+    <div class="logo">MyWebsite</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="AboutMe.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
   <header>
     <h1>About The Team</h1>
   </header>
@@ -82,6 +91,82 @@
 
   <footer>
     <p>&copy; 2025 My Website</p>
+     <div class="social-links">
+          <h3>Follow us</h3>
+            <ul class="list-social-links">
+            <li><a href="https://www.facebook.com/" class="fa fa-facebook"></a></li>
+            <li><a href="https://x.com/" class="fa fa-twitter"></a></li>
+            <li><a href="https://www.linkedin.com/" class="fa fa-linkedin"></a></li>
+          </ul>
+          </div>
   </footer>
 </body>
 </html>
+
+<style>
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+.social-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.list-social-links {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  padding: 0;
+  list-style: none;
+}
+
+.list-social-links li {
+  margin: 0 10px;
+}
+
+.list-social-links a {
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center; 
+}
+
+.list-social-links a:hover {
+  color: #00bcd4;
+}
