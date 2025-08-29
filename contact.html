@@ -11,30 +11,15 @@
         padding: 20px;
         background-color: #f9f9f9;
       }
+      
       header {
         background: #333;
         color: #fff;
         padding: 1rem 1.25rem 1.5rem;
         text-align: center;
       }
-      .top-bar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 0.75rem;
-      }
-      .brand {
-        font-size: 1.5rem;
-        font-weight: 700;
-      }
-      nav a {
-        color: #fff;
-        text-decoration: none;
-        margin-left: 1.25rem;
-        font-weight: 500;
-      }
-      nav a:first-child { margin-left: 0; }
-      nav a:hover { text-decoration: underline; }
+      
+      
       h1 { margin: 0; }
       main { margin: 2rem 0; }
       form { display: flex; flex-direction: column; gap: 1rem; }
@@ -70,14 +55,14 @@
   </head>
   <body>
     <header>
-      <div class="top-bar">
-        <div class="brand">MyWebsite</div>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="AboutMe.html">About</a>
-          <a href="contact.html" aria-current="page">Contact</a>
-        </nav>
-      </div>
+      <nav class="navbar">
+        <div class="logo">MyWebsite</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="AboutMe.html">About</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
       <h1>Contact Me</h1>
     </header>
 
@@ -118,3 +103,42 @@
     </script>
   </body>
 </html>
+
+<style>
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+  }
+
+  .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-links li {
+    margin: 0 15px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: #00bcd4;
+  }
+
+</style>
