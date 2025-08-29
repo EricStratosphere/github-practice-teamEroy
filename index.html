@@ -27,10 +27,9 @@
   <nav class="navbar">
     <div class="logo">MyWebsite</div>
     <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="AboutMe.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
     </ul>
   </nav>
   <header>
@@ -44,23 +43,22 @@
 
   <footer>
     <p>&copy; 2025 My Website</p>
-     <div class="col-md-3">
-              <h3>Follow us</h3>
-              <ul class="list-unstyled social">
-                <li><a href="#" class="fa fa-facebook"></a></li>
-                <li><a href="#" class="fa fa-twitter"></a></li>
-                <li><a href="#" class="fa fa-linkedin"></a></li>
-                <li><a href="#" class="fa fa-medium"></a></li>
-                <li><a href="#" class="fa fa-paper-plane"></a></li>
-              </ul>
-            </div>
+     <div class="social-links">
+          <h3>Follow us</h3>
+            <ul class="list-social-links">
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-linkedin"></a></li>
+            <li><a href="#" class="fa fa-medium"></a></li>
+            <li><a href="#" class="fa fa-paper-plane"></a></li>
+          </ul>
+          </div>
   </footer>
 </body>
 </html>
 
 
 <style>
-  /* styles.css */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -99,6 +97,36 @@ body {
 }
 
 .nav-links a:hover {
+  color: #00bcd4;
+}
+
+.social-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.list-social-links {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  padding: 0;
+  list-style: none;
+}
+
+.list-social-links li {
+  margin: 0 10px;
+}
+
+.list-social-links a {
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center; 
+}
+
+.list-social-links a:hover {
   color: #00bcd4;
 }
 
