@@ -1,0 +1,25 @@
+.dark-mode-button {
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: inherit;
+    color: black; 
+    background-color: white; 
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.dark-mode-button:hover {
+    background-color: rgb(77, 62, 62);
+    color: white; 
+    border-color: rgb(0, 89, 255);
+}
+
+body.dark-mode {
+    background-color: rgb(43, 35, 35);
+}
+
+body.dark-mode main {
+    color: white;
+}
